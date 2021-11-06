@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	ul(class='margin-top-half list-disc margin-left-1')
+		each item in items
+			li(class='margin-top-half')
+				a(href=item.url class='link aside-link')=item.name
+				p=item.description
+
+		else
+			li There are no items in this inventory
+
+	div(class='margin-top-1'): a(href='/item/new' class='link aside-link') Add an item

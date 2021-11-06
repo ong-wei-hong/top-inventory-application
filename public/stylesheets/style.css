@@ -1,8 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+/* settings, helpers */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+	font-family: Helvetica, sans-serif, Arial;
 }
 
-a {
-  color: #00B7FF;
+.wrapper {
+  max-width: 1920px;
+	min-width: 600px;
+  margin: 0 auto;
+	padding: 1em;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.column-gap-1 {
+	column-gap: 1em;
+}
+
+.flex-spacebetween{
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-align-center{
+	display: flex;
+	align-items: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.margin-half {
+	margin: 0.5em;
+}
+
+.padding-half {
+	padding: 0.5em;
+}
+
+.margin-left-half {
+	margin-left: 0.5em
+}
+
+.margin-left-1 {
+	margin-left: 1em;
+}
+
+.title {
+	font-size: 1.5em;
+}
+
+.margin-top-1 {
+	margin-top: 1em;
+}
+
+.margin-top-half{
+	margin-top: 0.5em;
+}
+
+.list-disc {
+	list-style-type: disc;
+}
+
+.button {
+	background-color:#0400ff;
+	color: #FFF;
+	padding: 0.5em;
+	border: 2px solid #000;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: #0044ff;
+}
+
+.button:active {
+	background-color: #002fdd;
+}
+
+/* header */
+.header {
+	background-color: #000;
+	color: #FFF;
+}
+
+.app-name {
+	font-size: 2em;
+}
+
+.header-button {
+	background-color: #0f21c8;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+}
+
+.header-button:hover {
+	background-color: #1a226e;
+}
+
+.header-button:active {
+	background-color: #161b46;
+}
+
+/* aside */
+.aside-divider {
+	margin: 1em 0;
+	border-top: 1px solid #CCC;
+}
+
+aside {
+	min-width: 7em;
+}
+
+aside > a {
+	display: block;
+}
+
+.aside-link {
+	color: #0f21c8;
+}
+
+.aside-link:active {
+	color: #00095a;
+}
+
+/* notice */
+.notice {
+	background-color: #008a00;
+	color: #FFF;
+}
+/* alert */
+.alert {
+	background-color: #8a0000;
+	color: #FFF;
+}
+
+/* form */
+form > * {
+	display: block;
+}
+
+.error {
+	color: #F00;
 }

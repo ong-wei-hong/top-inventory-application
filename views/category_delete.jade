@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	p(class='margin-top-half')=category.description
+	p(class="margin-top-1") Do you want to delete this category?
+
+	if items.length > 0
+		p(class="margin-top-half bold") The following items will be deleted as well
+		ul(class='margin-top-half list-disc margin-left-1')
+			each item in items
+				li(class='margin-top-half')
+					a(href=item.url class='link aside-link')=item.name
+					p=item.description
+	form(class='margin-top-1' method='POST' action=category.delete_url)
+		input(type='hidden' name='id' value=category._id)
+		input(type='submit' class='button' value='Delete category')

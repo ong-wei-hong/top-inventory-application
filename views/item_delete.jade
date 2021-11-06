@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	p(class='margin-top-half')=item.description
+	p(class="margin-top-1") Do you want to delete this item?
+	form(class='margin-top-1' method='POST' action=item.delete_url)
+		input(type='hidden' name='id' value=item._id)
+		input(type='submit' class='button' value='Delete item')

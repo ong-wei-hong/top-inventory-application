@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	form(method='POST' action=category.update_url)
+		label(for='name' class='margin-top-half') Name:
+		input(type='text' name='name' placeholder='Enter category name' value=name)
+		label(for='description' class='margin-top-half') Description:
+		textarea(name='description' placeholder='Enter category description')=description
+		input(type='submit' value='Update category' class='margin-top-half button')
+
+	if errors
+		ul(class='margin-top-1')
+			for error in errors
+				li(class='error')=error.msg
+

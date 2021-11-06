@@ -1,7 +1,29 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= `Inventory ${title}`
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		header(class='header')
+			div(class='wrapper flex-spacebetween flex-align-center header')
+				h1(class='bold app-name flex-left'): a(href='/') Inventory Application
+				div(class='flex-right')
+					a(href='/category' class='header-button padding-half') Category
+					a(href='/item' class='header-button padding-half margin-left-half') Item
+		if notice
+			div(class='wrapper notice')=notice
+		if alert
+			div(class='wrapper alert')=alert
+
+		main(class='wrapper flex column-gap-1')
+			aside(class='margin-half')
+				a(href='/' class='link aside-link') Home
+				div(class='aside-divider')
+				a(href='/category' class='link aside-link') All categories
+				a(href='/item' class='link aside-link') All items
+				div(class='aside-divider')
+				a(href='/category/new' class='link aside-link') New category
+				a(href='/item/new' class='link aside-link') New item
+			div(class='content')
+				h2(class='bold title')=title
+				block content

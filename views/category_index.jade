@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	ul(class='margin-top-half list-disc margin-left-1')
+		each category in categories
+			li(class='margin-top-half')
+				a(href=category.url class='link aside-link')=category.name
+				p=category.description
+
+		else
+			li There are no categories in this inventory
+
+	div(class='margin-top-1'): a(href='/category/new' class='link aside-link') Add a category

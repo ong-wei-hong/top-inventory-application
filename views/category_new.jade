@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	form(method='POST' action='/category/create')
+		label(for='name' class='margin-top-half') Name:
+		input(type='text' name='name' placeholder='Enter category name' value=(prev_name?prev_name:''))
+		label(for='description' class='margin-top-half') Description:
+		textarea(name='description' placeholder='Enter category description')=prev_description?prev_description:''
+		input(type='submit' value='Create category' class='margin-top-half button')
+
+	if errors
+		ul(class='margin-top-1')
+			for error in errors
+				li(class='error')=error.msg

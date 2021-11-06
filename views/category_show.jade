@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	p(class='margin-top-half')=category.description
+
+	ul(class='margin-top-half list-disc margin-left-1')
+		each item in items
+			li(class='margin-top-half')
+				a(href=item.url class='link aside-link')=item.name
+				p=item.description
+
+		else
+			li There are no items in this inventory
+
+	div(class='margin-top-1')
+		a(class='link aside-link' href=category.edit_url) Edit category
+		a(class='link aside-link margin-left-half' href=category.delete_url) Delete category

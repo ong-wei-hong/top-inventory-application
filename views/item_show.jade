@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	p(class='margin-top-half')=item.description
+	p(class='margin-top-half') #[strong(class='bold') Price: ] #{item.price}
+	p(class='margin-top-half') #[strong(class='bold') Quantity: ] #{item.quantity}
+	p(class='margin-top-1') #[strong(class='bold') Category: ]
+		a(href=item.category.url class='link aside-link')=item.category.name
+
+	div(class='margin-top-1')
+		a(class='link aside-link' href=item.edit_url) Edit item
+		a(class='link aside-link margin-left-half' href=item.delete_url) Delete item

@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	p(class='margin-top-half') Welcome to #[em Inventory Application], a very basic Express website designed to manage inventory.
+
+	h3(class='bold margin-top-half') Contents
+
+	if error
+		p(class='margin-top-half') Error getting inventory
+	else
+		p(class='margin-top-half') Current inventory is as follows:
+
+		ul(class='margin-top-half')
+			li #[strong Total categories: ] #{data.category_count}
+			li #[strong Total items: ] #{data.item_count}

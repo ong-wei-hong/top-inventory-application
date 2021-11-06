@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	form(method='POST' action=item.update_url)
+		label(for='name' class='margin-top-half') Name:
+		input(type='text' name='name' placeholder='Enter item name' value=name)
+		label(for='description' class='margin-top-half') Description:
+		textarea(name='description' placeholder='Enter item description')=description
+		label(for='category' class='margin-top-half') Category:
+		select(name='category')
+			for category in categories
+				option(value=category._id selected=(item_category.toString()==category._id))=category.name
+		label(for='price' class='margin-top-half') Price:
+		input(type='number' name='price' value=price placeholder='Enter price')
+		label(for='quantity' class='margin-top-half') Quantity:
+		input(type='number' name='quantity' value=quantity placeholder='Enter quantity')
+		input(type='submit' value='Update item' class='margin-top-half button')
+
+	if errors
+		ul(class='margin-top-1')
+			for error in errors
+				li(class='error')=error.msg

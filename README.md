@@ -19,3 +19,5 @@
 	<code>npm start</code> in root directory<br />
 	then, go to <a href='localhost:3000'>localhost:3000</a>
 </p>
+
+<p>Visit my working demo at <a href="https://inventory-application-1.herokuapp.com/">https://inventory-application-1.herokuapp.com/</a>
